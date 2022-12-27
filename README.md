@@ -1,8 +1,8 @@
 # peliculas
 
-![Captur![Captura16](https://user-images.githubusercontent.com/62777613/209695705-9110ec3c-ea69-4b88-8bd3-f254304df2dc.PNG)
+![Captura15](https://user-images.githubusercontent.com/62777613/209696024-ff70f533-6634-4455-a40b-53e602d15e44.PNG)
 
-a15](https://user-images.githubusercontent.com/62777613/209695688-acaf3ae2-51ea-4e37-9647-dc7352fb085f.PNG)
+![Captur![Captura16](https://user-images.githubusercontent.com/62777613/209695705-9110ec3c-ea69-4b88-8bd3-f254304df2dc.PNG)
 
 ![Captura17](https://user-images.githubusercontent.com/62777613/209695720-ef49d509-2db1-430c-9bb0-f95968b82872.PNG)
 

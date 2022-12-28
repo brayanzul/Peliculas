@@ -37,7 +37,7 @@ class CastingCards extends StatelessWidget {
           child: ListView.builder(
            itemCount: 15,
            scrollDirection: Axis.horizontal,
-           itemBuilder: (_, index) => CastCard(),
+           itemBuilder: (_, index) => CastCard( cast[index] ),
           ),
         );
       }
@@ -46,6 +46,10 @@ class CastingCards extends StatelessWidget {
 }
 
 class CastCard extends StatelessWidget {
+
+  final Cast actor;
+
+  const CastCard( this.actor );
 
   @override
   Widget build(BuildContext context) {
@@ -58,9 +62,9 @@ class CastCard extends StatelessWidget {
 
           ClipRRect(
             borderRadius: BorderRadius.circular(20),
-            child: const FadeInImage(
+            child: FadeInImage(
               placeholder: AssetImage('assets/no-image.jpg'),
-              image: NetworkImage('https://via.placeholder.com/150x300'),
+              image: NetworkImage( actor.fullProfilePath ),
               height: 140,
               width: 100,
               fit: BoxFit.cover,
@@ -69,8 +73,8 @@ class CastCard extends StatelessWidget {
 
           const SizedBox( width: 5 ),
 
-          const Text(
-            'Actor.name Zeus Antoño, 31años Nacion en Panama',
+          Text(
+            actor.name,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,

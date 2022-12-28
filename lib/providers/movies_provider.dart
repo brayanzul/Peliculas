@@ -25,7 +25,7 @@ class MoviesProvider extends ChangeNotifier{
   }
 
   Future<String> _getJsonData( String endpoint, [int page = 1] ) async {
-    var url = Uri.https( _baseUrl, endpoint, {
+    final url = Uri.https( _baseUrl, endpoint, {
       'api_key': _apiKey,
       'language': _lenguage,
       'page': '$page'
@@ -66,7 +66,7 @@ class MoviesProvider extends ChangeNotifier{
 
   Future<List<Cast>> getMovieCast( int movieId ) async {
 
-    // TODO: revisar el mapa
+    if( moviesCast.containsKey(movieId) ) return moviesCast[movieId]!;
 
     print('pidiendo info al servidor - Cast');
 
@@ -76,6 +76,21 @@ class MoviesProvider extends ChangeNotifier{
     moviesCast[movieId] = creditsResponse.cast;
 
     return creditsResponse.cast;
+
+  }
+
+  Future<List<Movie>> searchMovies( String query ) async {
+
+    final url = Uri.https( _baseUrl, '3/search/movie', {
+      'api_key': _apiKey,
+      'language': _lenguage,
+      'query': query
+    });
+
+    final response = await http.get(url);
+    final searchResponse = SearchResponse.fromjson( response.body );
+
+    return searchResponse.results;
 
   }
 

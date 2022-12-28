@@ -6,6 +6,10 @@
 
 ![Captura17](https://user-images.githubusercontent.com/62777613/209695720-ef49d509-2db1-430c-9bb0-f95968b82872.PNG)
 
+![Captura19](https://user-images.githubusercontent.com/62777613/209865071-57c058f1-8221-4b52-9132-5054b5dd9ce4.PNG)
+
+![Captura20](https://user-images.githubusercontent.com/62777613/209865085-0c0cad37-92f1-4aba-a25c-5208a7cace20.PNG)
+
 
 ## Getting Started
 

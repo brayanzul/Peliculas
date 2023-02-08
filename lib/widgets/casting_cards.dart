@@ -35,7 +35,7 @@ class CastingCards extends StatelessWidget {
           width: double.infinity,
           height: 180,
           child: ListView.builder(
-           itemCount: 15,
+           itemCount: cast.length,
            scrollDirection: Axis.horizontal,
            itemBuilder: (_, index) => CastCard( cast[index] ),
           ),
@@ -71,7 +71,7 @@ class CastCard extends StatelessWidget {
             ),
           ),
 
-          const SizedBox( width: 5 ),
+          const SizedBox( height: 5 ),
 
           Text(
             actor.name,

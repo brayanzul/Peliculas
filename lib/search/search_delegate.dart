@@ -12,10 +12,13 @@ class MovieSearchDelegate extends SearchDelegate {
   @override
   List<Widget> buildActions(BuildContext context) {
     return [
-       IconButton(
-         icon: const Icon( Icons.clear ),
-         onPressed: () => query = '', 
-       )
+        Padding(
+          padding: const EdgeInsets.only(right: 20),
+          child: IconButton(
+           icon: const Icon( Icons.clear ),
+           onPressed: () => query = '', 
+          ),
+        )
       ];
   }
 
@@ -31,12 +34,12 @@ class MovieSearchDelegate extends SearchDelegate {
 
     @override
     Widget buildResults(BuildContext context) {
-     return Text('buildResults');
+     return const Text('buildResults');
     }
 
     Widget _emptyContainer() {
-      return Container(
-          child: const Center(
+      return const SizedBox(
+          child: Center(
             child: Icon(Icons.movie_creation_outlined, color: Colors.black38, size: 130)
           ),
         );
@@ -95,6 +98,7 @@ class _MovieItem extends StatelessWidget {
       ),
       title: Text( movie.title ),
       subtitle: Text( movie.originalTitle ),
+      trailing: Text( movie.voteAverage.toString() ),
       onTap: () {
         
         Navigator.pushNamed(context, 'details', arguments: movie);
